@@ -25,24 +25,24 @@ const data = {
   experience: [
     {
       title: "Research Intern",
-      company: "Inteligence Machines Lab, ITU",
+      company: "Inteligent Machines Lab, ITU",
       year: "2024-Current",
       description:
-        "Worked on the Google Search team to improve the search experience for users. Built new features and improved the performance of the search engine.",
+        "As aresearch intern at IML Lab, I am working on a project related to 3D reconstruction using gaussian and deep learning techniques.",
     },
     {
-      title: "Teachning Assistant",
+      title: "Teaching Assistant",
       company: "Information Technology University, Lahore",
       year: "2022-Current",
       description:
-        "Worked on the Facebook Messenger team to improve the messaging experience for users. Built new features and improved the performance of the messaging app.",
+        "As an Undergraduate Teaching Assistant at ITU Lahore, I manage labs, create assignments, and evaluate students for Programming Fundamentals, Object-Oriented Programming and database courses",
     },
     {
       title: "Web Developer Intern",
-      company: "Arisoft",
+      company: "Arbisoft",
       year: "2023",
       description:
-        "Worked on the Facebook Messenger team to improve the messaging experience for users. Built new features and improved the performance of the messaging app.",
+        "As a Frontend Intern at Arbisoft Lahore, I’m gaining hands-on experience in HTML, CSS, JavaScript, ReactJS, Material UI, and Tailwind across various projects under expert guidance.",
     },
   ],
   education: [
@@ -50,22 +50,19 @@ const data = {
       degree: "Bachelor of Science in Computer Science",
       school: "Information Technology University, Lahore",
       year: "2021-Current",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus nec odio.",
+      grade: " CGPA: 3.5/4.0",
     },
     {
       degree: "FSc Pre-Engineering",
       school: "KIPS College, Lahore",
       year: "2019-2021",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus nec odio.",
+      grade: "Marks : 1044/1100",
     },
     {
       degree: "Matriculation",
       school: "L.D.A Model High School, Lahore",
       year: "2017-2019",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus nec odio.",
+      grade: "Marks : 1031/1100",
     },
   ],
   "web-skills": [
@@ -204,7 +201,7 @@ data["ml-skills"].forEach((skill) => {
   const skillDiv = document.createElement("div");
   skillDiv.classList.add("progress-wrapper");
   skillDiv.innerHTML = `<span class="caption">${skill.name}</span>
-    <div class="progress">
+        <div class="progress">
     <div class="progress-bar bg-danger" role="progressbar" style="width: ${skill.level}%" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100">
     ${skill.level}%
     </div>
@@ -223,7 +220,7 @@ data["education"].forEach((edu) => {
     <div class="details">
     <h5>${edu.degree}</h5>
     <small>${edu.school}</small>
-    <p>${edu.description}</p>
+    <p>${edu.grade}</p>
     </div>
     </li>`;
   education.appendChild(eduDiv);
