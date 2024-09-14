@@ -151,6 +151,13 @@ age.innerHTML = data.age;
 gender = document.getElementById("gender");
 gender.innerHTML = data.gender;
 
+///////////// CV DOwnload /////////////////
+download = document.getElementById("cv-download");
+// on click download
+download.onclick = () => {
+    window.open("./assets/cv.pdf");
+}
+
 
 // Skills Section //////////////////////////////////////////////
 // web skills
