@@ -470,10 +470,10 @@ a:hover, a:active {
 
 .progress {
     margin-top: 5px;
-    height: 1.25rem;
+    height: 1.5rem;
     border: 2px solid #fff;
-    background-color: #fff;
-    box-shadow: 0 0 0 2px #747474;
+    background-color: rgb(186,27,27);
+    box-shadow: 0 0 0 2px rgb(186,27,27);
 }
 
 .progress,
@@ -483,7 +483,7 @@ a:hover, a:active {
 
 .progress-bar {
     font-size: 12px;
-    background-color: #747474;
+    background-color: rgb(186,27,27);
 }
 
 /* 

@@ -119,26 +119,21 @@ const data = {
   ],
   projects: [
     {
-      name: "Project 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus nec odio.",
+      name: "Youtube clone",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
-      url: "dsfsdf",
+      imageUrl: "./img/pro.jpg",
     },
     {
-      name: "Project 2",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus nec odio.",
+      name: "Ecommerce website",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
-      url: "dsfsdf",
+      imageUrl: "./img/pro.jpg",
     },
     {
-      name: "Project 3",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus nec odio.",
+      name: "BlogTide",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
-      url: "dsfsdf",
-    },
+      imageUrl: "./img/pro.jpg",
+      },
+    
   ],
   contact: {
     email: "zainrazzaq2003@gmail.com",
@@ -187,8 +182,8 @@ data["web-skills"].forEach((skill) => {
   const skillDiv = document.createElement("div");
   skillDiv.classList.add("progress-wrapper");
   skillDiv.innerHTML = `<span class="caption">${skill.name}</span>
-    <div class="progress">
-    <div class="progress-bar bg-danger" role="progressbar" style="width: ${skill.level}%" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress" style="height:1.4rem">
+    <div class="progress-bar" role="progressbar" style="width: ${skill.level}% ; background-color:rgb(185,27,27)" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100">
     ${skill.level}%
     </div>
     </div>`;
@@ -201,8 +196,8 @@ data["ml-skills"].forEach((skill) => {
   const skillDiv = document.createElement("div");
   skillDiv.classList.add("progress-wrapper");
   skillDiv.innerHTML = `<span class="caption">${skill.name}</span>
-        <div class="progress">
-    <div class="progress-bar bg-danger" role="progressbar" style="width: ${skill.level}%" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100">
+        <div class="progress" style="height:1.4rem">
+    <div class="progress-bar" role="progressbar" style="width: ${skill.level}% ; background-color:rgb(185,27,27)" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100">
     ${skill.level}%
     </div>
     </div>`;
@@ -241,4 +236,24 @@ data["experience"].forEach((exp) => {
     </div>
     </li>`;
   experience.appendChild(expDiv);
+});
+
+// Projects Section //////////////////////////////////////////////
+
+projects = document.getElementById("projects");
+
+data["projects"].forEach((project) => {
+  const projectDiv = document.createElement("div");
+  projectDiv.classList.add("col-md-6", "col-lg-4", "wow", "fadeInUp");
+  projectDiv.innerHTML = `<div class="card">
+        <div class="img-place">
+        <img src=${project.imageUrl} alt="">
+        </div>
+        <div class="caption">
+        <a href="javascript:void(0)" class="post-category"></a>
+        <a href="#" class="post-title">${project.name}</a>
+        <span class="post-date"><span class="sr-only">Published on</span> May 22, 2024</span>
+        </div>
+    </div>`;
+  projects.appendChild(projectDiv);
 });
