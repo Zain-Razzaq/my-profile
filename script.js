@@ -268,11 +268,9 @@ form.onsubmit = (e) => {
 };
 
 // contact /////
-contacts = document.getElementById("contact");
-
+contacts = document.getElementById("contact-info");
 Object.entries(data.contact).forEach(([key, value]) => {
   const contactDiv = document.createElement("li");
-
   contactDiv.innerHTML = `<a href="#">${value}</a>`;
   contacts.appendChild(contactDiv);
 });
