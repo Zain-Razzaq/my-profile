@@ -132,13 +132,12 @@ const data = {
       name: "BlogTide",
       techStack: ["React", "Node.js", "Express", "MongoDB"],
       imageUrl: "./img/pro.jpg",
-      },
-    
+    },
   ],
   contact: {
+    address: "Lahore, Pakistan",
+    phone: "+923000000000",
     email: "zainrazzaq2003@gmail.com",
-    phone: "123",
-    address: "123 abc street, Lahore, Pakistan",
   },
 };
 
@@ -256,4 +255,37 @@ data["projects"].forEach((project) => {
         </div>
     </div>`;
   projects.appendChild(projectDiv);
+});
+
+/// Email form ///
+const form = document.getElementById("contact-form");
+
+form.onsubmit = (e) => {
+  e.preventDefault();
+  // set inputs to null
+  form.reset();
+  alert("Email Sent Successfully");
+};
+
+// contact /////
+contacts = document.getElementById("contact");
+
+Object.entries(data.contact).forEach(([key, value]) => {
+  const contactDiv = document.createElement("li");
+
+  contactDiv.innerHTML = `<a href="#">${value}</a>`;
+  contacts.appendChild(contactDiv);
+});
+
+// Footer Section //////////////////////////////////////////////
+
+address = document.getElementById("address");
+address.innerHTML = data.contact.address;
+
+// socials /////
+socials = document.getElementById("socials");
+data.socials.forEach((social) => {
+  const socialDiv = document.createElement("li");
+  socialDiv.innerHTML = `<a href="#">${social.name}</a>`;
+  socials.appendChild(socialDiv);
 });
