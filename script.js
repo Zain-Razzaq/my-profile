@@ -9,11 +9,11 @@ const data = {
   socials: [
     {
       name: "Github",
-      url: "fndylan",
+      url: "https://github.com/Zain-Razzaq",
     },
     {
       name: "Linkedin",
-      url: "fndylan",
+      url: "https://www.linkedin.com/in/zain-razzaq-96a084228/",
     },
     {
       name: "Instagram",
@@ -50,7 +50,7 @@ const data = {
       degree: "Bachelor of Science in Computer Science",
       school: "Information Technology University, Lahore",
       year: "2021-Current",
-      grade: " CGPA: 3.5/4.0",
+      grade: " CGPA: 3.55/4.0",
     },
     {
       degree: "FSc Pre-Engineering",
@@ -284,6 +284,6 @@ address.innerHTML = data.contact.address;
 socials = document.getElementById("socials");
 data.socials.forEach((social) => {
   const socialDiv = document.createElement("li");
-  socialDiv.innerHTML = `<a href="#">${social.name}</a>`;
+  socialDiv.innerHTML = `<a href="${social.url}">${social.name}</a>`;
   socials.appendChild(socialDiv);
 });
